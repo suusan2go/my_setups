@@ -26,8 +26,6 @@ fi
 
 if ask 'Homebrew install?'; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  brew doctor
 fi
 
 if ask 'Homebrew Budnle install?'; then
