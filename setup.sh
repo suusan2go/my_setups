@@ -59,9 +59,9 @@ if ask 'install gvm (Go Version Manager)?'; then
 fi
 
 if ask 'linking dotfiles'; then
-  [[ ! -d ~/.zshrc ]] && ln -s $REPO_DIR/dotfiles/zshrc ~/.zshrc
-  [[ ! -d ~/.gitconfig ]] && ln -s $REPO_DIR/dotfiles/gitconfig ~/.gitconfig
-  [[ ! -d ~/.gitignore_global ]] && ln -s $REPO_DIR/dotfiles/gitignore_global ~/.gitignore_global
+  [[ ! -f ~/.zshrc ]] && ln -s $REPO_DIR/dotfiles/zshrc ~/.zshrc
+  [[ ! -f ~/.gitconfig ]] && ln -s $REPO_DIR/dotfiles/gitconfig ~/.gitconfig
+  [[ ! -f ~/.gitignore_global ]] && ln -s $REPO_DIR/dotfiles/gitignore_global ~/.gitignore_global
   [[ ! -d ~/.config/nvim ]] && ln -s $REPO_DIR/dotfiles/nvim ~/.config/nvim
 fi
 
