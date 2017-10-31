@@ -66,6 +66,9 @@ if ask 'linking dotfiles'; then
 fi
 
 if ask 'install global python via pyenv?'; then
+  PYENV_ROOT=$HOME/.pyenv
+  PATH=$PYENV_ROOT/bin:$PATH
+  eval "$(pyenv init -)"
   CFLAGS="-I$(brew --prefix openssl)/include" \
     LDFLAGS="-L$(brew --prefix openssl)/lib" \
     pyenv install -v 3.6.3
