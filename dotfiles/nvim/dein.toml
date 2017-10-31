@@ -1,0 +1,52 @@
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+ 
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+# Rails向けのコマンドを提供する
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+# Less
+[[plugins]]
+repo = 'groenewege/vim-less'
+
+# Coffee Script
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+
+# html
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+# slim
+[[plugins]]
+repo = 'slim-template/vim-slim'
+
+# go
+[[plugins]]
+repo = 'fatih/vim-go'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
+# 自動で閉じる
+[[plugins]]
+repo = 'tpope/vim-endwise'
