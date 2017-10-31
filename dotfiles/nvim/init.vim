@@ -29,7 +29,7 @@ let s:dein_dir = expand('~/.cache/dein')
 " dein.vim 本体
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 " denite.vim
-let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
 
 " dein.vim がなければ github から落としてくる
 if &runtimepath !~# '/dein.vim'
