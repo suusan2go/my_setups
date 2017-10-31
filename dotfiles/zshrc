@@ -50,12 +50,9 @@ ZSH_THEME="gianu"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(my-env atom autojump brew brew-cask bundler cdd colored-man composer docker encode64 gem git homeshick pow rails rake rbenv tig tmux vagrant web-search)
-
-# User configuration
+plugins=(rbenv pyenv zsh-completions)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,27 +72,22 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls -G'
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
-# [[ -s "/Users/suzuken/.gvm/scripts/gvm" ]] && source "/Users/suzuken/.gvm/scripts/gvm"
-# export GOROOT='/usr/local/bin/go'
+# Golang
 export GOPATH="$HOME/Development"
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-# export GO15VENDOREXPERIMENT=1
+
+# Nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 # source '/Users/suzuken/Downloads/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
 # source '/Users/suzuken/Downloads/google-cloud-sdk/completion.zsh.inc'
+
+# for direnv
 eval "$(direnv hook zsh)"
 
 # export PATH=/opt/go_appengine:$PATH
@@ -113,3 +105,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # load secret environment vars from another files
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/suzuken/.sdkman"
+[[ -s "/Users/suzuken/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/suzuken/.sdkman/bin/sdkman-init.sh"
