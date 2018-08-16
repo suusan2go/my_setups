@@ -1,6 +1,6 @@
 RPROMPT='[%d]'
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/suzuken/.oh-my-zsh
+export ZSH=/Users/suusan2go/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -88,9 +88,9 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
-# source '/Users/suzuken/Downloads/google-cloud-sdk/path.zsh.inc'
+# source '/Users/suusan2go/Downloads/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
-# source '/Users/suzuken/Downloads/google-cloud-sdk/completion.zsh.inc'
+# source '/Users/suusan2go/Downloads/google-cloud-sdk/completion.zsh.inc'
 
 # for direnv
 eval "$(direnv hook zsh)"
@@ -99,7 +99,7 @@ eval "$(direnv hook zsh)"
 export PGDATA=/usr/local/var/postgres
 
 # added by travis gem
-[ -f /Users/suzuken/.travis/travis.sh ] && source /Users/suzuken/.travis/travis.sh
+[ -f /Users/suusan2go/.travis/travis.sh ] && source /Users/suusan2go/.travis/travis.sh
 
 alias dcu='docker-compose up'
 alias cdr='cd $(ghq root)/$(ghq list | peco)'
@@ -112,6 +112,9 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 # load secret environment vars from another files
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+# Golang
+[[ -s "/Users/suusan2go/.gvm/scripts/gvm" ]] && source "/Users/suusan2go/.gvm/scripts/gvm"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/suzuken/.sdkman"
-[[ -s "/Users/suzuken/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/suzuken/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/suusan2go/.sdkman"
+[[ -s "/Users/suusan2go/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/suusan2go/.sdkman/bin/sdkman-init.sh"
