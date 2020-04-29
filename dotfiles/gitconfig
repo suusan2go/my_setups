@@ -7,7 +7,7 @@
   email = ksuzuki180@gmail.com
 [core]
   editor = /usr/local/bin/nvim
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/suusan2go/.gitignore_global
 [alias]
   # いい感じのグラフでログを表示
   graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
@@ -21,3 +21,5 @@
   difff = diff --word-diff
 [ghq]
 	root = ~/Development/src
+[credential "https://source.developers.google.com"]
+        helper = gcloud.sh

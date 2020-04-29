@@ -52,10 +52,29 @@ if dein#load_state(s:dein_dir)
   " TOML を読み込み、キャッシュしておく
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  
+  " deoplete
+  call dein#add('Shougo/dein.vim')
+
+  if ((has('nvim')  || has('timers')) && has('python3')) && system('pip3 show neovim') !=# ''
+    call dein#add('Shougo/deoplete.nvim')
+    if !has('nvim')
+      call dein#add('roxma/nvim-yarp')
+      call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+  elseif has('lua')
+    call dein#add('Shougo/neocomplete.vim')
+  endif
 
   " 設定終了
   call dein#end()
   call dein#save_state()
+endif
+
+if dein#tap('deoplete.nvim')
+  let g:deoplete#enable_at_startup = 1
+elseif dein#tap('neocomplete.vim')
+  let g:neocomplete#enable_at_startup = 1
 endif
 
 " もし、未インストールものものがあったらインストール
