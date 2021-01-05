@@ -44,12 +44,6 @@ if ask 'execute brew bundle?(Brewfile)?'; then
   popd
 fi
 
-if ask 'install Ricty font?'; then
-  # https://github.com/edihbrandon/RictyDiminished
-  [[ ! -d $RICTY_FONT_DIR ]] && git clone git@github.com:edihbrandon/RictyDiminished.git
-  find "$RICTY_FONT_DIR" -name "*.ttf" -print0 | xargs -0 open
-fi
-
 if ask 'create development directory?'; then
   [[ ! -d $DEV_DIR ]] && mkdir $DEV_DIR
 fi
